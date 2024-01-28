@@ -1,6 +1,13 @@
+:root{
+  --bg:#f2e6d8;
+  --saida-bg:#f2f2f2;
+  --cor-secundaria:#f2cb9b;
+  --cor-tercearia:#59271c;
+  --fonte-detalhes: "Arial Black", Helvetica, sans-serif;
+}
+
 body {
-  /* margin: 10%; */
-  background-color: #f2e6d8;
+  background-color: var(--bg);
 }
 
 .logo {
@@ -10,9 +17,6 @@ body {
 
 .conteudo {
   display: flex;
-  /* width: 70vw; */
-  /* height: 70vw; */
-  /* background-color: #F2F2F2; */
   justify-content: space-around;
 }
 
@@ -28,7 +32,7 @@ body {
 
 .saida {
   width: 18%;
-  background-color: #f2f2f2;
+  background-color: var(--saida-bg);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -40,31 +44,30 @@ body {
   border: none;
   border-radius: 15px;
   padding: 7px 30px;
-  font-family: "Arial Black", Helvetica, sans-serif;
+  font-family:var(--fonte-detalhes) ;
   font-weight: 500;
-  background-color: #f2cb9b;
+  background-color: var(--cor-secundaria);
   width:50%;
 
 }
 
 #encriptar {
-  background-color: #f2cb9b;
+  background-color: var(--cor-secundaria);
   border: none;
   border-radius: 15px;
   padding: 7px 30px;
-  color: #59271c;
-  font-family: "Arial Black", Helvetica, sans-serif;
+  color: var(--cor-tercearia);
+  font-family: var(--fonte-detalhes);
   font-weight: 500;
 }
 
 #descriptar {
-  background-color: #59271c;
+  background-color: var(--cor-tercearia);
   border: none;
-  border-color: #f2cb9b;
   border-radius: 15px;
-  color: #f2cb9b;
+  color: var(--cor-secundaria);
   padding: 7px 30px;
-  font-family: "Arial Black", Helvetica, sans-serif;
+  font-family: var(--fonte-detalhes);
   font-weight: 500;
 }
 .conteudo__imagem{
@@ -87,25 +90,12 @@ body {
 }
 
 label {
-  margin-bottom: 0.2rem;
+  display: flex;
+  align-items:center;
   position: relative;
-}
+  left: 100%;
+  margin-bottom: 0.2rem;
 
-label:not(:first-of-type) {
-  margin-top: 1rem;
-}
-
-.on::after {
-  content: "Apenas letras minúsculas e sem acento.";
-  position: fixed;
-  top: 0;
-  right: 0;
-  color: #dfdfdf;
-  font-size: 0.65rem;
-  padding: 0.2rem 0.3rem;
-  width: auto;
-  display: block;
-  border: none;
 }
 
 .conteudo__texto:focus {
@@ -114,12 +104,18 @@ label:not(:first-of-type) {
 
 footer{
   text-align: center;
+  margin: 1%;
+  padding: 10px;
+}
+
+.marca{
+  width: 100px;
 }
 
 .link{
   text-decoration: none;
-  color: #59271c;
+  color: var(--cor-tercearia);
 }
 .link:hover{
-  color: #f2cb9b;
+  color: var(--cor-secundaria);
 }

@@ -1,14 +1,9 @@
-const limparTela = () => {
-  let resultado = document.getElementById("resultado");
-  const r = resultado.value;
-  const tela = document.getElementById("imagens");
-  const msg = document.querySelector(".mensagem");
-};
-
 const encriptar = () => {
-  const texto = document.getElementById("texto");
+  const texto = document.getElementById('texto');
   const mensagem = texto.value;
-  const resultado = document.getElementById("resultado");
+  const resultado = document.getElementById('resultado');
+  const tela = document.getElementById('imagens');
+  const msg = document.querySelector('.mensagem');
 
   const criptografia = {
     a: "ai",
@@ -18,23 +13,21 @@ const encriptar = () => {
     u: "ufat",
   };
 
-  const caracteres = mensagem.split("");
+  const caracteres = mensagem.split('');
 
   const mensagemCriptografada = caracteres
     .map((caractere) => {
       return criptografia[caractere.toLowerCase()] || caractere;
     })
-    .join("");
+    .join('');
 
-  texto.value = "";
-  const tela = document.getElementById("imagens");
-  const msg = document.querySelector(".mensagem");
+  texto.value = '';
 
-  if (mensagem != "") {
+  if (mensagem != '') {
 
-    tela.style.display = "none";
+    tela.style.display = 'none';
+    msg.style.display = 'none';
 
-    msg.style.display = "none";
     return (resultado.innerText = mensagemCriptografada);
 
   }else{
@@ -45,16 +38,18 @@ const encriptar = () => {
 };
 
 const descriptar = () => {
-  const texto = document.querySelector("#texto");
+  const texto = document.querySelector('#texto');
   let mensagem = texto.value;
-  const resultado = document.getElementById("resultado");
+  const resultado = document.getElementById('resultado');
+  const tela = document.getElementById('imagens');
+  const msg = document.querySelector('.mensagem');
 
   let criptografia = [
-    ["a", "ai"],
-    ["e", "enter"],
-    ["i", "imes"],
-    ["o", "ober"],
-    ["u", "ufat"],
+    ['a', 'ai'],
+    ['e', 'enter'],
+    ['i', 'imes'],
+    ['o', 'ober'],
+    ['u', 'ufat'],
   ];
 
   for (i = 0; i < criptografia.length; i++) {
@@ -63,15 +58,13 @@ const descriptar = () => {
     }
   }
 
-  texto.value = "";
-  const tela = document.getElementById("imagens");
-  const msg = document.querySelector(".mensagem");
+  texto.value = '';
 
-  if (mensagem != "") {
+  if (mensagem != '') {
 
-    tela.style.display = "none";
+    tela.style.display = 'none';
+    msg.style.display = 'none';
 
-    msg.style.display = "none";
     return (resultado.innerText = mensagem);
   }else{
     tela.style.display = 'flex';
@@ -80,7 +73,7 @@ const descriptar = () => {
 };
 
 const copiarMensagem = async () => {
-  const texto = document.getElementById("resultado");
+  const texto = document.getElementById('resultado');
   const mensagem = texto.innerText;
 
   try {
