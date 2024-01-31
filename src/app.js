@@ -28,12 +28,13 @@ const encriptar = () => {
     tela.style.display = 'none';
     msg.style.display = 'none';
 
+
     return (resultado.innerText = mensagemCriptografada);
 
   }else{
     resultado.innerText = ''
     tela.style.display = 'flex';
-    msg.style.display = 'flex'
+    msg.style.display = 'flex';
   }
 };
 
@@ -68,7 +69,8 @@ const descriptar = () => {
     return (resultado.innerText = mensagem);
   }else{
     tela.style.display = 'flex';
-    msg.style.display = 'flex'
+    msg.style.display = 'flex';
+
   }
 };
 
