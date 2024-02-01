@@ -50,16 +50,20 @@ body {
   width: 50%;
   text-align: center;
 }
+.conteudo__botoes{
+  display: flex;
+}
 
 #encriptar {
   background-color: var(--cor-secundaria);
   border: none;
   border-radius: 15px;
   padding: 2% 2.5%;
+  margin: 1%;
   color: var(--cor-tercearia);
   font-family: var(--fonte-detalhes);
   font-weight: 500;
-  width: 12vw;
+  width: 15vw;
   text-align: center;
 }
 
@@ -69,9 +73,10 @@ body {
   border-radius: 15px;
   color: var(--cor-secundaria);
   padding: 2% 2.5%;
+  margin: 1%;
   font-family: var(--fonte-detalhes);
   font-weight: 500;
-  width: 12vw;
+  width: 15vw;
   text-align: center;
 }
 .conteudo__imagem {
