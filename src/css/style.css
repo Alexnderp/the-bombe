@@ -98,12 +98,12 @@ body {
   text-align: center;
 }
 
-label {
+#msg {
   display: flex;
   align-items: center;
-  position: relative;
-  left: 100%;
+  /* position: relative; */
   margin-bottom: 0.2rem;
+  gap: 5px;
 }
 
 .conteudo__texto:focus {
@@ -147,8 +147,18 @@ footer {
 }
 
 @media (max-width: 850px) {
+header{
+  display: flex;
+  justify-content: center;
+}
+
   .conteudo__texto{
-    width: 80%;
+    width: 100%;
+  }
+
+  #msg{
+    font-size: 10px;
+    gap: 5px;
   }
   
   .conteudo__botoes {
